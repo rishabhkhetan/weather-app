@@ -10,6 +10,8 @@ const app = express();
 import geocode from './utils/geocode.js'
 import weather from './utils/weather.js'
 
+const port = process.env.PORT || 3000;
+
 
 
 //partials location path
@@ -123,6 +125,6 @@ app.get('*',(req,res)=>{
 
 
 
-app.listen(3000,()=>{
-    console.log(`Server is running on port 3000`);
+app.listen(port,()=>{
+    console.log(`Server is running on port ${port}`);
 })
